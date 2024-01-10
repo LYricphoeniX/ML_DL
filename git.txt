@@ -1,0 +1,29 @@
+本地工作
+工作区文件复制到暂存区，暂存区内容全部移动到仓库
+	git add 文件名，git commit -m “注释”
+检查修改状态，检查修改内容
+	git status，git diff
+检查仓库更新日志 
+	git log
+回顾输入指令
+	git reflog
+撤回一次复制/移动（撤销工作区/暂存区修改），用版本库文件替换工作区/暂存区内容
+	git checkout -- 文件名
+暂存区文件修改撤销，且修改后的文件将回退工作区（取消git add）
+	git reset HEAD 文件名
+删除仓库中的文件并更新仓库
+	git rm 文件名，git commit -m “注释”
+
+远程工作
+从远程库克隆本地库
+	git clone git@github.com:用户名/远程库名.git
+查看远程库
+	git remote -v
+从本地库分支推送远程库分支
+	git push 远程库名 分支名
+创建远程库的分支到本地库
+	git checkout -b 分支名 远程库名/分支名
+设置本地库分支到远程库分支的链接
+	git branch --set-upstream 分支名 远程库名/分支名
+从远程库分支更新本地库分支
+	git pull
